@@ -4,7 +4,7 @@ import { Ionicons } from '@expo/vector-icons';
 import * as SplashScreen from 'expo-splash-screen';
 import { useEffect } from 'react';
 import { View, Text, StyleSheet, Image } from 'react-native';
-import { SafeAreaProvider, useSafeAreaInsets } from 'react-native-safe-area-context';
+import { useSafeAreaInsets } from 'react-native-safe-area-context';
 
 SplashScreen.preventAutoHideAsync();
 
@@ -26,17 +26,15 @@ export default function SettingsScreen() {
   }
 
   return (
-    <SafeAreaProvider>
-      <View style={ styles.container }>
-        <View style={ styles.settings }>
-          <Ionicons name="settings-outline" size={20} color="black" />
-          <Text style={{ fontFamily: 'Inter_900Black', paddingLeft: 10 }}>Settings</Text>
-        </View>
-        <Text style={{ fontFamily: 'Inter-SemiBoldItalic', fontSize: 20 }}>Online Font: Inter-SemiBoldItalic</Text>
-
-        <PatrickStar />
+    <View style={ styles.container }>
+      <View style={ styles.settings }>
+        <Ionicons name="settings-outline" size={20} color="black" />
+        <Text style={{ fontFamily: 'Inter_900Black', paddingLeft: 10 }}>Settings</Text>
       </View>
-    </SafeAreaProvider>
+      <Text style={{ fontFamily: 'Inter-SemiBoldItalic', fontSize: 20 }}>Online Font: Inter-SemiBoldItalic</Text>
+
+      <PatrickStar />
+    </View>
   );
 }
 

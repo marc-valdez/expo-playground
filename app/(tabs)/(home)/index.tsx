@@ -5,7 +5,11 @@ export default function HomeScreen() {
   return (
     <View style={styles.container}>
       <Text>Home</Text>
-      <Link href="/details">View Details</Link>
+      <Link
+        href={{
+          pathname: '/details/[id]',
+          params: { id: 'bacon' },
+        }}>View User Details</Link>
     </View>
   );
 }

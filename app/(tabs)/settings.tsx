@@ -1,8 +1,9 @@
+import PatrickStar from '@/assets/svgs/patrick_star';
 import { Inter_900Black, useFonts } from '@expo-google-fonts/inter';
 import { Ionicons } from '@expo/vector-icons';
 import * as SplashScreen from 'expo-splash-screen';
 import { useEffect } from 'react';
-import { View, Text, StyleSheet } from 'react-native';
+import { View, Text, StyleSheet, Image } from 'react-native';
 import { SafeAreaProvider, useSafeAreaInsets } from 'react-native-safe-area-context';
 
 SplashScreen.preventAutoHideAsync();
@@ -31,7 +32,9 @@ export default function SettingsLayout() {
           <Ionicons name="settings-outline" size={20} color="black" />
           <Text style={{ fontFamily: 'Inter_900Black', paddingLeft: 10 }}>Settings</Text>
         </View>
-        <Text style={{ fontFamily: 'Inter-SemiBoldItalic', fontSize: 36 }}>Online Font: Inter-SemiBoldItalic</Text>
+        <Text style={{ fontFamily: 'Inter-SemiBoldItalic', fontSize: 20 }}>Online Font: Inter-SemiBoldItalic</Text>
+
+        <PatrickStar />
       </View>
     </SafeAreaProvider>
   );

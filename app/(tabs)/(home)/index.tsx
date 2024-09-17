@@ -1,7 +1,8 @@
 import { Ionicons } from '@expo/vector-icons';
 import { Link } from 'expo-router';
-import { View, Text, StyleSheet, ToastAndroid, Pressable } from 'react-native';
+import { Text, StyleSheet, ToastAndroid, Pressable } from 'react-native';
 import Toast from 'react-native-root-toast';
+import { SafeAreaView } from 'react-native-safe-area-context';
 
 export default function HomeScreen() {
   function showAndroidToast() {
@@ -17,7 +18,7 @@ export default function HomeScreen() {
   }
 
   return (
-    <View style={styles.container}>
+    <SafeAreaView style={styles.container}>
       <Text>Home</Text>
       <Link href="./details" style={styles.link}>Details</Link>
       <Pressable onPress={showAndroidToast} style={[styles.button, { backgroundColor: '#3DDC84' }]}>
@@ -29,7 +30,7 @@ export default function HomeScreen() {
         <Ionicons name="logo-apple" size={24} color="white" />
         <Text style={[styles.buttonText, { paddingLeft: 10 }]}>Cross Plastform Toast</Text>
       </Pressable>
-    </View>
+    </SafeAreaView>
   );
 }
 

@@ -3,7 +3,8 @@ import { Inter_900Black, useFonts } from '@expo-google-fonts/inter';
 import { Ionicons } from '@expo/vector-icons';
 import * as SplashScreen from 'expo-splash-screen';
 import { useEffect } from 'react';
-import { View, Text, StyleSheet } from 'react-native';
+import { Text, StyleSheet } from 'react-native';
+import { SafeAreaView } from 'react-native-safe-area-context';
 
 SplashScreen.preventAutoHideAsync();
 
@@ -24,15 +25,15 @@ export default function SettingsScreen() {
   }
 
   return (
-    <View style={ styles.container }>
-      <View style={ styles.settings }>
+    <SafeAreaView style={ styles.container }>
+      <SafeAreaView style={ styles.settings }>
         <Ionicons name="settings-outline" size={20} color="black" />
         <Text style={{ fontFamily: 'Inter_900Black', paddingLeft: 10 }}>Settings</Text>
-      </View>
+      </SafeAreaView>
       <Text style={{ fontFamily: 'Inter-SemiBoldItalic', fontSize: 20 }}>Online Font: Inter-SemiBoldItalic</Text>
 
       <PatrickStar />
-    </View>
+    </SafeAreaView>
   );
 }
 

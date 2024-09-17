@@ -3,13 +3,11 @@ import { Inter_900Black, useFonts } from '@expo-google-fonts/inter';
 import { Ionicons } from '@expo/vector-icons';
 import * as SplashScreen from 'expo-splash-screen';
 import { useEffect } from 'react';
-import { View, Text, StyleSheet, Image } from 'react-native';
-import { useSafeAreaInsets } from 'react-native-safe-area-context';
+import { View, Text, StyleSheet } from 'react-native';
 
 SplashScreen.preventAutoHideAsync();
 
 export default function SettingsScreen() {
-  const insets = useSafeAreaInsets();
   const [loaded, error] = useFonts({
     Inter_900Black,
     'Inter-SemiBoldItalic': 'https://rsms.me/inter/font-files/Inter-SemiBoldItalic.otf?v=3.12',

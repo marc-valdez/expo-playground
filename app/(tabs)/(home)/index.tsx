@@ -1,6 +1,6 @@
 import { Ionicons } from '@expo/vector-icons';
 import { Link } from 'expo-router';
-import { View, Text, StyleSheet, Button, ToastAndroid, Pressable } from 'react-native';
+import { View, Text, StyleSheet, ToastAndroid, Pressable } from 'react-native';
 import Toast from 'react-native-root-toast';
 
 export default function HomeScreen() {

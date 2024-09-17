@@ -8,7 +8,7 @@ import { SafeAreaProvider, useSafeAreaInsets } from 'react-native-safe-area-cont
 
 SplashScreen.preventAutoHideAsync();
 
-export default function SettingsLayout() {
+export default function SettingsScreen() {
   const insets = useSafeAreaInsets();
   const [loaded, error] = useFonts({
     Inter_900Black,

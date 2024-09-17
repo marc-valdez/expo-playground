@@ -1,10 +1,15 @@
 import { Stack } from 'expo-router';
-import { View, Image } from 'react-native';
+import { RootSiblingParent } from 'react-native-root-siblings';
+import { SafeAreaProvider } from 'react-native-safe-area-context';
 
 export default function RootLayout() {
   return (
-    <Stack>
-      <Stack.Screen name="(tabs)" />
-    </Stack>
+    <SafeAreaProvider>
+      <RootSiblingParent>
+        <Stack>
+          <Stack.Screen name="(tabs)" />
+        </Stack>
+      </RootSiblingParent>
+    </SafeAreaProvider>
   );
 }
